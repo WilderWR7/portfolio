@@ -5,7 +5,7 @@ export const portfolioData = {
     role: "Desarrollador Web Full Stack",
     tagline: "Desarrollador Full Stack / Backend con fuerte enfoque en la lógica del lado del servidor, resolución de problemas complejos y contenedores Docker.",
     status: "Disponible para Trabajar",
-    avatar: "/assets/developer.png",
+    avatar: "assets/developer.png",
     resumeUrl: "#",
     socials: [
       { name: "GitHub", url: "https://github.com/WilderWR7", icon: "github" }
@@ -35,7 +35,7 @@ export const portfolioData = {
       category: "Full Stack",
       description: "Este completo sistema ERP integra un backend en NestJS y TypeScript con una interfaz interactiva en React, permitiendo gestionar en tiempo real inventarios, ventas, compras, caja, sucursales, facturación, analíticas avanzadas y accesos de diversos usuarios.",
       tags: ["React", "NestJS", "PostgreSQL", "Docker"],
-      image: "/assets/ecommerce.png",
+      image: "assets/ecommerce.png",
       demoUrl: "#",
       githubUrl: "#",
       featured: true
@@ -46,7 +46,7 @@ export const portfolioData = {
       category: "Full Stack",
       description: "Desarrollé una aplicación full-stack desde cero para la administración de campeonatos, abarcando el diseño de la base de datos, backend y frontend. Construí un microservicio de reconocimiento de huellas dactilares para autenticación segura e implementé toda la arquitectura utilizando contenedores.",
       tags: ["Next.js", "NestJS", ".NET Framework", "PostgreSQL", "Docker"],
-      image: "/assets/taskmanager.png",
+      image: "assets/taskmanager.png",
       demoUrl: "#",
       githubUrl: "#",
       featured: true
