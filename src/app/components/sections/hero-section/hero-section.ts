@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'hero-section',
   imports: [],
   templateUrl: './hero-section.html',
 })
-export class HeroSection {}
+export class HeroSection {
+  name = input.required<string>();
+}

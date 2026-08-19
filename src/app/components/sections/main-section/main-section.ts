@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { HeroSection } from "../hero-section/hero-section";
 import { AboutMeSection } from "../about-me-section/about-me-section";
 import { SummarySection } from "../summary-section/summary-section";
@@ -12,4 +12,6 @@ import { EducationSection } from "../education-section/education-section";
   imports: [HeroSection, AboutMeSection, SummarySection, SkillsSection, ProjectSection, ExperienceSection, EducationSection],
   templateUrl: './main-section.html',
 })
-export class MainSection { }
+export class MainSection { 
+  name = input.required<string>();
+}

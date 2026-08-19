@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
 import { MainSection } from "./components/sections/main-section/main-section";
@@ -9,4 +9,6 @@ import { MainSection } from "./components/sections/main-section/main-section";
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {}
+export class App {
+  name = 'Wilder Mayta';
+}
