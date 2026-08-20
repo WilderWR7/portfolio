@@ -20,7 +20,7 @@
                 class="md:col-span-6 space-y-6 text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
                 <p id="full-about-desc"
                     class="whitespace-pre-line font-normal">
-                    <!-- Injected via JS -->
+                    {{about.description}}
                 </p>
 
                 <div class="pt-4 flex flex-wrap gap-4">
@@ -36,10 +36,16 @@
             <!-- Stats & Highlights Grid -->
             <div id="about-stats"
                 class="md:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <!-- Injected via JS -->
+                @for (stat of about.stats; track $index) {
+                <div
+                    class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/80 shadow-md text-center hover:border-[#ff6b2b] transition-all">
+                    <span
+                        class="block text-4xl sm:text-5xl font-extrabold text-[#ff6b2b]">{{stat.value}}</span>
+                    <span
+                        class="block text-sm font-semibold text-slate-600 dark:text-slate-400 mt-2">{{stat.label}}</span>
+                </div>
+                }
             </div>
-
         </div>
-
     </div>
 </section>
