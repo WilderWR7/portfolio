@@ -121,7 +121,8 @@
                 <div id="summary-projects" class="space-y-3.5">
                     @for (project of projects; track project.id) {
                     <div
-                        class="flex gap-3.5 p-2.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-orange-50/50 dark:hover:bg-slate-800 border border-transparent hover:border-orange-200 dark:hover:border-slate-700 transition-all duration-200 cursor-pointer project-card-trigger"
+                        class="flex gap-3.5 p-2.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-orange-50/50 dark:hover:bg-slate-800 border border-transparent hover:border-orange-200 dark:hover:border-slate-700 transition-all duration-200 cursor-pointer"
+                        (click)="openProject(project)"
                         [attr.data-id]="project.id">
                         <div
                             class="w-20 h-16 sm:w-24 sm:h-18 rounded-xl overflow-hidden shrink-0 bg-slate-200 dark:bg-slate-700">

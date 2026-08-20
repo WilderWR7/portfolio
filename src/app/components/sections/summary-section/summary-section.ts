@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProjectModalService } from '../../../services/project-modal.service';
+import { Project } from '../../../interfaces/project.interface';
 
 @Component({
   selector: 'summary-section',
@@ -6,6 +8,12 @@ import { Component } from '@angular/core';
   templateUrl: './summary-section.html',
 })
 export class SummarySection {
+  modalService = inject(ProjectModalService);
+
+  openProject(project: Project) {
+    this.modalService.open(project);
+  }
+
   skills = [
     { name: "JavaScript / TypeScript", percentage: 90, color: "#F7DF1E" },
     { name: "React / Next.js", percentage: 85, color: "#61DAFB" },

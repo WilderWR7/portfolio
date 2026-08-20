@@ -2,15 +2,17 @@ import { Component } from '@angular/core';
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
 import { MainSection } from "./components/sections/main-section/main-section";
+import { ProjectModal } from "./components/project-modal/project-modal";
 import { Project } from './interfaces/project.interface';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Footer, MainSection],
+  imports: [Header, Footer, MainSection, ProjectModal],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
+
   name = 'Wilder Mayta';
   projects: Project[] = [
     {

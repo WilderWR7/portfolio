@@ -1,5 +1,6 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { Project } from '../../../interfaces/project.interface';
+import { ProjectModalService } from '../../../services/project-modal.service';
 
 @Component({
   selector: 'project-section',
@@ -8,4 +9,10 @@ import { Project } from '../../../interfaces/project.interface';
 })
 export class ProjectSection {
   projects = input.required<Project[]>();
+  modalService = inject(ProjectModalService);
+
+  openProject(project: Project) {
+    this.modalService.open(project);
+  }
 }
+
