@@ -5,10 +5,10 @@
     <app-header></app-header>
 
     <!-- MAIN CONTENT -->
-    <app-main-section [name]="name"></app-main-section>
+    <app-main-section [name]="name" [projects]="projects"></app-main-section>
 
     <!-- FOOTER (Exact replica of mockup footer) -->
-    <app-footer></app-footer>
+    <app-footer [name]="name"></app-footer>
 
     <!-- PROJECT DETAIL MODAL -->
     <div id="project-modal"
