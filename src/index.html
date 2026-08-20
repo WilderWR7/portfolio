@@ -1,11 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevPortfolio | Desarrollador Web y Especialista Full Stack</title>
     <meta name="description"
       content="Portafolio personal de desarrollador web moderno, responsivo y dinámico, construido con HTML5 y Tailwind CSS." />
+
+    <script>
+      (function() {
+        try {
+          const theme = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (theme === 'dark' || (!theme && prefersDark) || !theme) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (_) {}
+      })();
+    </script>
 
     <!-- Redes Sociales / SEO Sharing (Facebook, WhatsApp, LinkedIn, X/Twitter) -->
     <meta property="og:type" content="website" />
@@ -36,7 +50,7 @@
     <link rel="icon" type="image/svg+xml"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
   </head>
-  <body>
+  <body class="bg-[#fcfdfd] dark:bg-[#0b1120] text-slate-800 dark:text-slate-100 transition-colors duration-300 font-sans selection:bg-[#ff6b2b]/20 selection:text-[#ff6b2b] min-h-screen flex flex-col">
     <app-root></app-root>
   </body>
 </html>
