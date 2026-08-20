@@ -1,9 +1,11 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
   imports: [],
   templateUrl: './footer.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Footer {}
+export class Footer {
+  name = input.required();
+  fullYear = new Date().getFullYear();
+}
